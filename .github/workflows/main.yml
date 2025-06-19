@@ -5,10 +5,14 @@ on:
     
   # schedule:
   #   - cron: "*/ 5 * * * *"
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
       
+  pull_request:
+    branches:
+      - main
+     
 
 jobs: 
   saludo:
@@ -24,3 +28,4 @@ jobs:
         run: |
           echo "El repositorio ${{ github.repository }} contiene los siguientes archivos:"
           tree
+          
